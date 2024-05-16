@@ -1,21 +1,9 @@
-package main
+package stringcompression
 
 import (
 	"fmt"
 	"strconv"
 )
-
-func main() {
-	testCases := [][]byte{[]byte("aabbccc"), []byte("a"), []byte("abbbbbbbbbbb")}
-	exp := []int{6, 1, 4}
-	for i, test := range testCases {
-		fmt.Println("============================")
-		ans := compress(test)
-		fmt.Println("Ans: ", ans)
-		fmt.Println("Exepected ans: ", exp[i])
-	}
-
-}
 
 func compress(chars []byte) int {
 	fmt.Println("Input: ", string(chars))
